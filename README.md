@@ -1,4 +1,4 @@
-# microservices-devops-challenge06
+# microservices-devops-challenge07
 
 Course "[Architecting and Developing modern and scalable applications based on Microservices (pt-br)](https://drive.google.com/file/d/1JXXmYhfi-Sk0zwiEbBIEswDC6AFeyBlD/view?usp=sharing)".
 
