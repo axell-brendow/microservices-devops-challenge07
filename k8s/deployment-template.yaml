@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservices-devops-challenge07
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: microservices-devops-challenge07
+  template: # inside template we will have a pod specification
+    metadata:
+      labels:
+        app: microservices-devops-challenge07
+    spec:
+      containers:
+        - name: microservices-devops-challenge07
+          image: img-app-deployment
+          ports:
+            - containerPort: 8000
+          resources:
+            requests:
+              cpu: "50m"
+            limits:
+              cpu: "100m"
