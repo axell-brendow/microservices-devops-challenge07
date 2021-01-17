@@ -17,6 +17,14 @@ To test Go application:
 GOPATH=$(pwd) go test challenge07 -v -cover
 ```
 
+To run Go application:
+
+```
+# You can choose any port you want if you will not use k8s/deployment.yaml
+# to run the application in a Kubernetes Cluster
+GOPATH=$(pwd) go run challenge07 --port=9000
+```
+
 ## Other challenges
 
 - [Nginx + PHP-FPM + Redis + MySQL with docker-compose](https://github.com/axell-brendow/microservices-devops-challenge01)

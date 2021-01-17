@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"math"
 	"net/http"
@@ -21,7 +22,9 @@ func greet(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	portPtr := flag.Int("port", 8000, "Server port")
+	flag.Parse()
 	http.HandleFunc("/", greet)
-	fmt.Println("Starting server on port 8000")
-	http.ListenAndServe(":8000", nil)
+	fmt.Println(fmt.Sprintf("Starting server on port %d", *portPtr))
+	http.ListenAndServe(fmt.Sprintf(":%d", *portPtr), nil)
 }
