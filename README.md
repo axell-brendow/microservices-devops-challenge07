@@ -7,7 +7,14 @@ Course "[Architecting and Developing modern and scalable applications based on M
 To create this Deployment in your cluster:
 
 ```
-kubectl apply -f .
+kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/service.yaml
+```
+
+To test Go application:
+
+```
+GOPATH=$(pwd) go test challenge07 -v -cover
 ```
 
 ## Other challenges
